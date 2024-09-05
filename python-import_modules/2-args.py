@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import sys
+from sys import argv
 
 if __name__ == "__main__":
     argv = sys.argv[1:]
@@ -16,4 +16,3 @@ if __name__ == "__main__":
     
     for i, arg in enumerate(argv, start=1):
         print(f"{i} : {arg}")
-
