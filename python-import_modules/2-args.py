@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
-import sys
+from sys import argv
 
 if __name__ == "__main__":
-    arguments = sys.argv[1:]
-    nombre_arguments = len(arguments)
+    arguments = argv[1:]
+    nombre_argu = len(arguments)
+    print(f"{nombre_argu} argument{'s' if nombre_argu != 1 else ''}", end="")
 
 
-    if nombre_arguments == 0:
-        print("0 argument.")
-    elif nombre_arguments == 1:
-        print("1 argument :")
+    if nombre_argu == 0:
+        print(".")
+    elif nombre_argu == 1:
+        print(":")
     else:
-        print(f"{nombre_arguments} arguments :")
+        print(":")
 
 
     for i, arg in enumerate(arguments, start=1):
         print(f"{i} : {arg}")
-
