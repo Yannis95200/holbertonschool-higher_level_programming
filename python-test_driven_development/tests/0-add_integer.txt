@@ -6,7 +6,7 @@
 >>> add_integer(-5,-3)
 -8
 
-add_integer(10000,-3)
+>>> add_integer(10000,-3)
 9997
 
 >>> add_integer(10.20,15.20)
@@ -15,10 +15,13 @@ add_integer(10000,-3)
 >>> add_integer(10.54587,-3)
 7
 
-add_integer(-10.564658797,-30.44984984)
+>>> add_integer(-10.564658797,-30.44984984)
 -40
 
->> add_integer(-5,*3)
+>>> add_integer(1)
+99
+
+>>> add_integer(-5,*3)
 Traceback (most recent call last):
 ...
 TypeError: Value after * must be an iterable, not int
@@ -38,3 +41,8 @@ SyntaxError: invalid syntax
 Traceback (most recent call last):
 ...
 OverflowError: cannot convert float infinity to integer
+
+>>> add_integer()
+Traceback (most recent call last):
+...
+TypeError: add_integer() missing 1 required positional argument: 'a'
