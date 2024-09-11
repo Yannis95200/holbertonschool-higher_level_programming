@@ -34,3 +34,7 @@ NameError: name 'yannis' is not defined
     ...
 SyntaxError: invalid syntax
 
+>>> add_integer(float('inf'), 15)
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
