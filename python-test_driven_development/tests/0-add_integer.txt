@@ -1,0 +1,36 @@
+>>> add_integer = __import__('0-add_integer').add_integer
+
+>>> add_integer(5,3)
+8
+
+>>> add_integer(-5,-3)
+-8
+
+add_integer(10000,-3)
+9997
+
+>>> add_integer(10.20,15.20)
+25
+
+>>> add_integer(10.54587,-3)
+7
+
+add_integer(-10.564658797,-30.44984984)
+-40
+
+>> add_integer(-5,*3)
+Traceback (most recent call last):
+...
+TypeError: Value after * must be an iterable, not int
+
+>>> add_integer(yannis,7)
+Traceback (most recent call last):
+...
+NameError: name 'yannis' is not defined
+
+>>> add_integer(45,44,554)
+  File "<stdin>", line 1
+    >>> add_integer(45,44,554)
+    ...
+SyntaxError: invalid syntax
+
