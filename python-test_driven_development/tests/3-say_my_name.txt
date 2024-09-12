@@ -5,8 +5,8 @@ My name is yannis ranguin
 My name is BONJOUR ranguin
 >>> say_my_name("B", "a")
 My name is B a
->>> say_my_name("BONJOUR", "C'est Yannis")
-My name is BONJOUR C'est Yannis
+>>> say_my_name("Yannis")
+My name is Yannis
 
 >>> say_my_name(1, "C'est Yannis")
 Traceback (most recent call last):
