@@ -1,0 +1,64 @@
+>>> print_square = __import__('4-print_square').print_square
+>>> print_square(4)
+####
+####
+####
+####
+>>> print_square(10)
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+>>> print_square(10 + 1)
+###########
+###########
+###########
+###########
+###########
+###########
+###########
+###########
+###########
+###########
+###########
+>>> print_square(1 * 3)
+###
+###
+###
+
+>>> print_square(1 * yannis)
+Traceback (most recent call last):
+...
+NameError: name 'yannis' is not defined
+
+>>> print_square(1 * "yannis")
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+>>> print_square(-1)
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
+
+>>> print_square(500000000000000000)
+Traceback (most recent call last):
+...
+    print("#" * size)
+MemoryError
+
+>>> print_square(4 / 0)
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
+
+>>> print_square(4444444444444444444444444444444444444444)
+Traceback (most recent call last):
+...
+OverflowError: cannot fit 'int' into an index-sized integer
