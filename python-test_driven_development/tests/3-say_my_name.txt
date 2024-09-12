@@ -3,8 +3,8 @@ say_my_name = __import__('3-say_my_name').say_my_name
 My name is yannis ranguin
 >>> say_my_name("BONJOUR", "ranguin")
 My name is BONJOUR ranguin
->>> say_my_name("B", "a")
-My name is B a
+>>> say_my_name("B", "yan")
+My name is B yan
 >>> say_my_name("Yannis")
 My name is Yannis
 
@@ -22,3 +22,8 @@ TypeError: last_name must be a string
 Traceback (most recent call last):
 ...
 TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+>>> say_my_name(yannis, "Yannis")
+Traceback (most recent call last):
+...
+NameError: name 'yannis' is not defined
