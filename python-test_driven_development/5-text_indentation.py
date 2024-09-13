@@ -22,17 +22,21 @@ def text_indentation(text):
         thanks.
     """
     if not isinstance(text, str):
-
         raise TypeError("text must be a string")
 
+    # Strip leading and trailing whitespace
     text = text.strip()
 
+    # Add two newlines after '.', '?', or ':'
     for char in ".?:":
         text = text.replace(char, char + "\n\n")
 
+    # Remove leading and trailing whitespace from each line
     result = []
     for line in text.split('\n'):
         result.append(line.strip())
 
+    # Join the lines with a newline and print the formatted text
     formatted_text = '\n'.join(result)
     print(formatted_text)
+
