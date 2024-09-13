@@ -1,11 +1,12 @@
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
 >>> text_indentation ('salut. yannis tes la ? non je code:')
-salut.
-
-yannis tes la ?
-
-non je code:
+    salut.
+    <BLANKLINE>
+    yannis tes la ?
+    <BLANKLINE>
+    non je code:
+    <BLANKLINE>
 
 
 >>> text_indentation(777777)
