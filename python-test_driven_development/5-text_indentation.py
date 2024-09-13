@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def text_indentation(text):
     """
     Formats a given text by adding two new lines after each occurrence
@@ -29,11 +30,9 @@ def text_indentation(text):
     for char in ".?:":
         text = text.replace(char, char + "\n\n")
 
-
     result = []
     for line in text.split('\n'):
         result.append(line.strip())
-
 
     formatted_text = '\n'.join(result)
     print(formatted_text)
