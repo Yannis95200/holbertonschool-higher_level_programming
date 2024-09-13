@@ -1,42 +1,39 @@
 #!/usr/bin/python3
+"""
+    Prints a text with 2 new lines after each of these characters:
+    '.', '?', ':'.
+"""
+
+
 def text_indentation(text):
     """
-    Formats a given text by adding two new lines after each occurrence
-    of '.', '?', or ':' characters, and removes any leading or trailing
-    whitespace from each line.
-
+    Prints a text with 2 new lines after each of these characters:
+    '.', '?', ':'.
     Args:
-        text (str): The input text to format.
-
+        text (str): The text to format.
     Raises:
-        TypeError: If the input `text` is not a string.
-
+        TypeError: If the text is not a string.
     Example:
-        >>> text_indentation("Hello. How are you? Fine: thanks.")
+        text_indentation("Hello. How are you? Fine: Great!")
+    Output:
         Hello.
-
         How are you?
-
         Fine:
-
-        thanks.
+        Great!
     """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    # Strip leading and trailing whitespace
     text = text.strip()
-
-    # Add two newlines after '.', '?', or ':'
-    for char in ".?:":
-        text = text.replace(char, char + "\n\n")
-
-    # Remove leading and trailing whitespace from each line
-    result = []
-    for line in text.split('\n'):
-        result.append(line.strip())
-
-    # Join the lines with a newline and print the formatted text
-    formatted_text = '\n'.join(result)
-    print(formatted_text)
-
+    result = ""
+    i = 0
+    while i < len(text):
+        result += text[i]
+        if text[i] in ".?:":
+            result += "\n\n"
+            i += 1
+            while i < len(text) and text[i] == " ":
+                i += 1
+            continue
+        i += 1
+    print(result, end="")
