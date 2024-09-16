@@ -38,7 +38,8 @@ class Square:
             position (tuple): The position of the square (default is (0, 0)).
 
         Raises:
-            TypeError: If `size` is not an integer or `position` is not a tuple of 2 positive integers.
+            TypeError: If `size` is not an integer or `position`
+            is not a tuple of 2 positive integers.
             ValueError: If `size` is negative.
         """
         self.size = size
@@ -93,9 +94,9 @@ class Square:
         Raises:
             TypeError: If `value` is not a tuple of 2 positive integers.
         """
-        if (not isinstance(value, tuple) or len(value) != 2 or
-            not all(isinstance(num, int) for num in value) or
-            not all(num >= 0 for num in value)):
+        if (not isinstance(value, tuple) or
+                len(value) != 2 or
+                not all(isinstance(num, int) and num >= 0 for num in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
@@ -110,17 +111,14 @@ class Square:
 
     def my_print(self):
         """
-        Prints the square with the character `#` according to the size and position.
+        Prints the square with the character `#`
+        according to the size and position.
         If size is 0, prints an empty line.
         """
         if self.__size == 0:
             print()
             return
-
-        # Print new lines for vertical position (position[1])
         for index in range(self.__position[1]):
             print()
-
-        # Print the square with spaces for horizontal position (position[0])
         for index in range(self.__size):
             print(" " * self.__position[0] + "#" * self.__size)
