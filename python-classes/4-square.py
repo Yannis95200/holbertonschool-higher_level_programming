@@ -3,12 +3,14 @@
 Defines a class `Square`.
 """
 
+
 class Square:
     """
     A class used to represent a Square.
 
     Attributes:
-        __size (int): The size of the square's side (private). Must be a non-negative integer.
+        __size (int): The size of the square's side (private)
+        . Must be a non-negative integer.
 
     Methods:
         __init__(self, size=0):
