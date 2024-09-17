@@ -129,11 +129,12 @@ class Rectangle:
         """
         print the print_symbol with the character #
         """
-        if self.__width == 0 or self.__height == 0:
+        if self.width == 0 or self.height == 0:
             return ""
-        for index in range(self.__height - 1):
-            print(str(self.print_symbol) * self.width)
-        return str(self.print_symbol * self.width)
+        result = ""
+        for index in range(self.height):
+            result += str(self.print_symbol) * self.width + "\n"
+        return result.strip()
 
     def __repr__(self):
         """""
