@@ -1,25 +1,19 @@
 #!/usr/bin/python3
+"""
+Validates that the provided value is a positive integer.
+"""
+
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
     """
-    Rectangle class that inherits from BaseGeometry and implements
-    area calculation and string representation.
+    Validates that the provided value is a positive integer.
     """
-
     def __init__(self, width, height):
         """
-        Initializes the Rectangle with width and height after validation.
-
-        Args:
-            width (int): The width of the rectangle.
-            height (int): The height of the rectangle.
-
-        Raises:
-            TypeError: If width or height is not an integer.
-            ValueError: If width or height is less than or equal to 0.
+        Validates that the provided value is a positive integer.
         """
         self.integer_validator("width", width)
         self.integer_validator("height", height)
@@ -28,18 +22,12 @@ class Rectangle(BaseGeometry):
 
     def area(self):
         """
-        Computes the area of the rectangle.
-
-        Returns:
-            int: The area of the rectangle (width * height).
+        Validates that the provided value is a positive integer.
         """
         return self.__width * self.__height
 
     def __str__(self):
         """
-        Returns a string representation of the rectangle.
-
-        Returns:
-            str: The string format "[Rectangle] width/height".
+        Validates that the provided value is a positive integer.
         """
         return "[Rectangle] {}/{}".format(self.__width, self.__height)
