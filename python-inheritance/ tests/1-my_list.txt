@@ -10,7 +10,7 @@
 >>> my_list.append(3)
 >>> my_list.append(5)
 
->>> MyList.append("yannis")
+>>> MyList.append("y")
 Traceback (most recent call last):
 TypeError: descriptor 'append' for 'list' objects doesn't apply to a 'str' object
 
@@ -29,4 +29,3 @@ TypeError: descriptor 'append' for 'list' objects doesn't apply to a 'str' objec
 
 >>> my_list = MyList()
 >>> my_list.print_sorted()
-[]
