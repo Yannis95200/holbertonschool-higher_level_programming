@@ -6,6 +6,7 @@ Validates that the provided value is a positive integer.
 
 Rectangle = __import__('9-rectangle').Rectangle
 
+
 class Square(Rectangle):
     """
     Square class that inherits from Rectangle.
@@ -34,6 +35,7 @@ class Square(Rectangle):
             int: The area of the square (size * size).
         """
         return self.__size * self.__size
+
     def __str__(self):
         """
         Validates that the provided value is a positive integer.
