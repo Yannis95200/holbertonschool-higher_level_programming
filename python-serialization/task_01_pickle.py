@@ -43,13 +43,16 @@ class CustomObject:
     @classmethod
     def deserialize(cls, filename):
         """
-        Deserializes an object from a file.
+            Deserializes an object from a file.
 
-        Args:
-            filename (str): Filename to load the object from.
+            Args:
+                filename (str): Filename to load the object from.
 
-        Returns:
-            CustomObject: The deserialized object.
-        """
-        with open(filename, "rb") as file:
-            return pickle.load(file)
+            Returns:
+                CustomObject: The deserialized object.
+            """
+        try:
+            with open(filename, "rb") as file:
+                return pickle.load(file)
+        except FileNotFoundError:
+            return None
