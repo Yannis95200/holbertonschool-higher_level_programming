@@ -23,5 +23,5 @@ def fetch_and_save_posts():
             writer = csv.writer(f)
             fields = ['id', 'title', 'body']
             writer.writerow(fields)
-            for index in post:
-                writer.writerow([index['id'], index['title'], index['body']])
+            for index_2 in post:
+                writer.writerow([index_2['id'], index_2['title'], index_2['body']])
