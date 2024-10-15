@@ -50,6 +50,7 @@ def login():
 
 
 @app.route('/jwt-protected', methods=['GET'])
+@jwt_required()
 def jwt_protected():
     return "Admin Access: Granted"
 
