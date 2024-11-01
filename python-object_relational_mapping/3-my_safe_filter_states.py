@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-import MySQLdb
-import sys
 
 """Script to connect to a MySQL database and retrieve states by exact name.
 Uses command-line arguments for authentication and state name input."""
+
+import MySQLdb
+import sys
 
 if __name__ == "__main__":
 
