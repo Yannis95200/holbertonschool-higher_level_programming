@@ -11,6 +11,7 @@ from model_state import Base, State
 
 Base = declarative_base()
 
+
 class City(Base):
     """Class representing a city linked to a state in the database."""
 
